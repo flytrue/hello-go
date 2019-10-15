@@ -126,7 +126,7 @@ func newUser(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(iduser)
 
 	dbc := db.Create(&User{Name: name, Email: email, Iduser: iduser})
-	fmt.Println("start create" + dbc.Error.Error())
+	fmt.Println("start create user name")
 	if dbc.Error != nil {
 		fmt.Fprintf(w, "Error create = "+dbc.Error.Error())
 		return
